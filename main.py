@@ -31,7 +31,7 @@ class MathApp(App):
         sm.add_widget(StartScreen(name='start'))
         sm.add_widget(ProgressScreen(name='progress'))
         sm.add_widget(HelpScreen(name='help'))
-        sm.add_widget(AboutScreen(name='help'))
+        sm.add_widget(AboutScreen(name='about'))
         return sm
 
 if __name__ == '__main__':
