@@ -28,7 +28,7 @@ class MathApp(App):
     def build(self):
         sm = ScreenManager()
         sm.add_widget(MenuScreen(name='menu'))
-        sm.add_widget(StartScreen(name='settings'))
+        sm.add_widget(StartScreen(name='start'))
         sm.add_widget(ProgressScreen(name='progress'))
         sm.add_widget(HelpScreen(name='help'))
         sm.add_widget(AboutScreen(name='help'))

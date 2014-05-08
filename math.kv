@@ -11,6 +11,7 @@
             orientation: 'vertical'
             Button:
                 text: 'Start'
+                on_press: root.manager.current = 'start'
             Button:
                 text: 'Achievements'
             Button:
@@ -18,3 +19,38 @@
             Button:
                 text: 'About'
 
+<StartScreen>:
+    BoxLayout:
+        spacing: 25
+        orientation: 'vertical'
+        Label:
+            text: 'Start - Select a category'
+        Button:
+            size_hint: 0.7, 1
+            pos_hint: {'center_x': 0.5}
+            text: 'add'
+        Button:
+            size_hint: 0.7, 1
+            pos_hint: {'center_x': 0.5}
+            text: 'subtract'
+        Button:
+            size_hint: 0.7, 1
+            pos_hint: {'center_x': 0.5}
+            text: 'multiply'
+        Button:
+            size_hint: 0.7, 1
+            pos_hint: {'center_x': 0.5}
+            text: 'division'
+        Button:
+            size_hint: 0.7, 1
+            pos_hint: {'center_x': 0.5}
+            text: 'greater/smaller'
+        Button:
+            size_hint: 0.7, 1
+            pos_hint: {'center_x': 0.5}
+            text: 'Challenge'
+        Button:
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5}
+            text: 'back'
+            on_press: root.manager.current = 'menu'
