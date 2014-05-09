@@ -25,40 +25,43 @@
 
 <StartScreen>:
     BoxLayout:
-        spacing: 25
         padding: 25
+        spacing: 25
         orientation: 'vertical'
         Label:
             size_hint: 0.5, 0.15
-            pos_hint: {'center_x': 0.5}
+            pos_hint: {'center_x': 0.45}
             text: 'Start - Select a category'
-        Button:
-            size_hint: 0.7, 1
-            pos_hint: {'center_x': 0.5}
-            text: 'add'
-        Button:
-            size_hint: 0.7, 1
-            pos_hint: {'center_x': 0.5}
-            text: 'subtract'
-        Button:
-            size_hint: 0.7, 1
-            pos_hint: {'center_x': 0.5}
-            text: 'multiply'
-        Button:
-            size_hint: 0.7, 1
-            pos_hint: {'center_x': 0.5}
-            text: 'division'
-        Button:
-            size_hint: 0.7, 1
-            pos_hint: {'center_x': 0.5}
-            text: 'greater/smaller'
-        Button:
-            size_hint: 0.7, 1
-            pos_hint: {'center_x': 0.5}
-            text: 'Challenge'
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 25
+            Button:
+                size_hint: 0.7, 1
+                pos_hint: {'center_x': 0.5}
+                text: 'add'
+            Button:
+                size_hint: 0.7, 1
+                pos_hint: {'center_x': 0.5}
+                text: 'subtract'
+            Button:
+                size_hint: 0.7, 1
+                pos_hint: {'center_x': 0.5}
+                text: 'multiply'
+            Button:
+                size_hint: 0.7, 1
+                pos_hint: {'center_x': 0.5}
+                text: 'division'
+            Button:
+                size_hint: 0.7, 1
+                pos_hint: {'center_x': 0.5}
+                text: 'greater/smaller'
+            Button:
+                size_hint: 0.7, 1
+                pos_hint: {'center_x': 0.5}
+                text: 'Challenge'
         Button:
             size_hint: 0.5, 0.1
-            pos_hint: {'center_x': 0.5}
+            pos_hint: {'center_x': 0.45}
             text: 'back'
             on_press: root.manager.current = 'menu'
 
@@ -69,7 +72,7 @@
         orientation: 'vertical'
         Label:
             size_hint: 0.5, 0.15
-            pos_hint: {'center_x': 0.5}
+            pos_hint: {'center_x': 0.45}
             text: 'Progress - View all your Achievements'
         TabbedPanel:
             do_default_tab: False
@@ -87,7 +90,7 @@
                     text: 'Coming soon!'
         Button:
             size_hint: 0.5, 0.1
-            pos_hint: {'center_x': 0.5}
+            pos_hint: {'center_x': 0.45}
             text: 'back'
             on_press: root.manager.current = 'menu'
 
@@ -98,12 +101,12 @@
         orientation: 'vertical'
         Label:
             size_hint: 0.5, 0.15
-            pos_hint: {'center_x': 0.5}
+            pos_hint: {'center_x': 0.45}
             text: 'Progress - View all your Achievements'
         Label:
             text: root.help_text()
         Button:
             size_hint: 0.5, 0.1
-            pos_hint: {'center_x': 0.5}
+            pos_hint: {'center_x': 0.45}
             text: 'back'
             on_press: root.manager.current = 'menu'
