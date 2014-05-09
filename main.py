@@ -39,6 +39,10 @@ class ProgressScreen(Screen):
     pass
 
 
+class GameActionScreen(Screen):
+    pass
+
+
 class HelpScreen(Screen):
 
     def help_text(self):
@@ -89,6 +93,11 @@ class MathApp(App):
         sm.add_widget(HelpScreen(name='help'))
         sm.add_widget(AboutScreen(name='about'))
         sm.add_widget(AddChooseDifficulty(name='addChooser'))
+        sm.add_widget(SubChooseDifficulty(name='subChooser'))
+        sm.add_widget(MultiChooseDifficulty(name='multiChooser'))
+        sm.add_widget(DivChooseDifficulty(name='divChooser'))
+        sm.add_widget(GreaterSmallerChooseDifficulty(name='greaterSmallerChooser'))
+        sm.add_widget(ChallengeChooseDifficulty(name='challengeChooser'))
         return sm
 
 if __name__ == '__main__':

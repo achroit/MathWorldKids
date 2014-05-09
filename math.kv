@@ -47,29 +47,34 @@
                 size_hint: 0.7, 1
                 pos_hint: {'center_x': 0.5}
                 text: 'subtract'
+                on_press: root.manager.current = 'subChooser'
             Button:
                 size_hint: 0.7, 1
                 pos_hint: {'center_x': 0.5}
                 text: 'multiply'
+                on_press: root.manager.current = 'multiChooser'
             Button:
                 size_hint: 0.7, 1
                 pos_hint: {'center_x': 0.5}
                 text: 'division'
+                on_press: root.manager.current = 'divChooser'
             Button:
                 size_hint: 0.7, 1
                 pos_hint: {'center_x': 0.5}
                 text: 'greater/smaller'
+                on_press: root.manager.current = 'greaterSmallerChooser'
             Button:
                 size_hint: 0.7, 1
                 pos_hint: {'center_x': 0.5}
                 text: 'Challenge'
+                on_press: root.manager.current = 'challengeChooser'
         Button:
             size_hint: 0.5, 0.1
             pos_hint: {'center_x': 0.45}
             text: 'back'
             on_press: root.manager.current = 'menu'
 
-<AddChooseDifficulty>:
+<AddChooseDifficulty,SubChooseDifficulty,MultiChooseDifficulty,DivChooseDifficulty,GreaterSmallerChooseDifficulty,ChallengeChooseDifficulty>:
     BoxLayout:
         padding: 25
         spacing: 25
