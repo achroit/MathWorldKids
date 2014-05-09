@@ -14,10 +14,13 @@
                 on_press: root.manager.current = 'start'
             Button:
                 text: 'Achievements'
+                on_press: root.manager.current = 'progress'
             Button:
                 text: 'Tips & Tricks'
+                on_press: root.manager.current = 'help'
             Button:
                 text: 'About'
+                on_press: root.manager.current = 'about'
 
 <StartScreen>:
     BoxLayout:
@@ -51,7 +54,36 @@
             pos_hint: {'center_x': 0.5}
             text: 'Challenge'
         Button:
-            size_hint: 0.5, 0.5
+            size_hint: 0.5, 0.6
+            pos_hint: {'center_x': 0.5}
+            text: 'back'
+            on_press: root.manager.current = 'menu'
+
+<ProgressScreen>:
+    BoxLayout:
+        spacing: 25
+        padding: 25
+        orientation: 'vertical'
+        Label:
+            size_hint: 0.5, 0.15
+            pos_hint: {'center_x': 0.5}
+            text: 'Progress - View all your Achievements'
+        TabbedPanel:
+            do_default_tab: False
+            TabbedPanelItem:
+                text: 'Basic'
+                Label:
+                    text: 'Basic achievements'
+            TabbedPanelItem:
+                text: 'Challenge'
+                Label:
+                    text: 'Challenge achievements'
+            TabbedPanelItem:
+                text: 'Special'
+                Label:
+                    text: 'Coming soon!'
+        Button:
+            size_hint: 0.5, 0.1
             pos_hint: {'center_x': 0.5}
             text: 'back'
             on_press: root.manager.current = 'menu'
