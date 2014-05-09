@@ -1,5 +1,6 @@
 from kivy.app import App
-from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
+
 
 
 # Declare both screens
@@ -58,7 +59,7 @@ class AboutScreen(Screen):
 class MathApp(App):
 
     def build(self):
-        sm = ScreenManager()
+        sm = ScreenManager(transition=FadeTransition())
         sm.add_widget(MenuScreen(name='menu'))
         sm.add_widget(StartScreen(name='start'))
         sm.add_widget(ProgressScreen(name='progress'))
