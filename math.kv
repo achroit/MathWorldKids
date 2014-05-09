@@ -1,3 +1,4 @@
+#:kivy 1.8.1
 <MenuScreen>:
     BoxLayout:
         orientation: 'vertical'
@@ -28,6 +29,8 @@
         padding: 25
         orientation: 'vertical'
         Label:
+            size_hint: 0.5, 0.15
+            pos_hint: {'center_x': 0.5}
             text: 'Start - Select a category'
         Button:
             size_hint: 0.7, 1
@@ -54,7 +57,7 @@
             pos_hint: {'center_x': 0.5}
             text: 'Challenge'
         Button:
-            size_hint: 0.5, 0.6
+            size_hint: 0.5, 0.1
             pos_hint: {'center_x': 0.5}
             text: 'back'
             on_press: root.manager.current = 'menu'
@@ -82,6 +85,23 @@
                 text: 'Special'
                 Label:
                     text: 'Coming soon!'
+        Button:
+            size_hint: 0.5, 0.1
+            pos_hint: {'center_x': 0.5}
+            text: 'back'
+            on_press: root.manager.current = 'menu'
+
+<HelpScreen>:
+    BoxLayout:
+        spacing: 25
+        padding: 25
+        orientation: 'vertical'
+        Label:
+            size_hint: 0.5, 0.15
+            pos_hint: {'center_x': 0.5}
+            text: 'Progress - View all your Achievements'
+        Label:
+            text: root.help_text()
         Button:
             size_hint: 0.5, 0.1
             pos_hint: {'center_x': 0.5}

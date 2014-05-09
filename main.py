@@ -16,7 +16,24 @@ class ProgressScreen(Screen):
 
 
 class HelpScreen(Screen):
-    pass
+
+    def help_text(self):
+        return "Here i will provide simple tricks to become faster when\n" \
+               "doing mental calculations.\n" \
+               "Example: Instead of adding 5 to a digit greater than 5,\n" \
+               "its often more simple to subtract 5 and then add 10.\n" \
+               " 8 + 5 = ?\n" \
+               " 8 - 5 = 3; 3 + 10 = 13\n" \
+               "\n"\
+               "Or add in two steps, first to get to an more easy number, \n" \
+               "then whatever remains.\n" \
+               "\n"\
+               "587 + 33 = ?\n" \
+               "33 = 20 + 13\n" \
+               "587 + 13 = 600; 600 + 20 = 620\n" \
+               "Therefore 587 + 33 is 620\n" \
+               "\n"\
+               "More will follow soon!\n"
 
 
 class AboutScreen(Screen):
