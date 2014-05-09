@@ -88,6 +88,7 @@ class MathApp(App):
         sm.add_widget(ProgressScreen(name='progress'))
         sm.add_widget(HelpScreen(name='help'))
         sm.add_widget(AboutScreen(name='about'))
+        sm.add_widget(AddChooseDifficulty(name='addChooser'))
         return sm
 
 if __name__ == '__main__':
