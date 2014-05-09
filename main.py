@@ -12,27 +12,81 @@ class StartScreen(Screen):
 
 
 class AddChooseDifficulty(Screen):
-    pass
+    category1 = "Up to 5"
+    category2 = "Up to 10"
+    category3 = "Up to 15"
+    category4 = "Up to 20"
+    category5 = "Up to 25"
+    category6 = "Up to 35"
+    category7 = "Up to 50"
+    category8 = "Up to 65"
+    category9 = "Up to 75"
+    category10 = "Up to 100"
 
 
 class SubChooseDifficulty(Screen):
-    pass
+    category1 = "Up to 5"
+    category2 = "Up to 10"
+    category3 = "Up to 15"
+    category4 = "Up to 20"
+    category5 = "Up to 25"
+    category6 = "Up to 35"
+    category7 = "Up to 50"
+    category8 = "Up to 65"
+    category9 = "Up to 75"
+    category10 = "Up to 100"
 
 
 class MultiChooseDifficulty(Screen):
-    pass
+    category1 = "Times of 2"
+    category2 = "Times of 3"
+    category3 = "Times of 4"
+    category4 = "Times of 5"
+    category5 = "Times of 6"
+    category6 = "Times of 7"
+    category7 = "Times of 8"
+    category8 = "Times of 9"
+    category9 = "Times of 10"
+    category10 = "Times of 11 and 12"
 
 
 class DivChooseDifficulty(Screen):
-    pass
+    category1 = "Times of 2"
+    category2 = "Times of 3"
+    category3 = "Times of 4"
+    category4 = "Times of 5"
+    category5 = "Times of 6"
+    category6 = "Times of 7"
+    category7 = "Times of 8"
+    category8 = "Times of 9"
+    category9 = "Times of 10"
+    category10 = "Times of 11 and 12"
 
 
 class GreaterSmallerChooseDifficulty(Screen):
-    pass
+    category1 = "Up to 10"
+    category2 = "25"
+    category3 = "50"
+    category4 = "100"
+    category5 = "Adding values"
+    category6 = "Subtracting values"
+    category7 = "Multiplication"
+    category8 = "Division"
+    category9 = "Mixing 1"
+    category10 = "Mixing 2"
 
 
 class ChallengeChooseDifficulty(Screen):
-    pass
+    category1 = "Adding + Subtracting"
+    category2 = "Adding + Subtracting 2"
+    category3 = "Multiplication and Division"
+    category4 = "Negative Numbers"
+    category5 = "A little bit of everything 1"
+    category6 = "Longer tasks 1"
+    category7 = "Longer tasks 2"
+    category8 = "Longer tasks 3"
+    category9 = "A little bit of everything 2"
+    category10 = "Grande Finale"
 
 
 class ProgressScreen(Screen):
@@ -97,7 +151,7 @@ class MathApp(App):
         sm.add_widget(MultiChooseDifficulty(name='multiChooser'))
         sm.add_widget(DivChooseDifficulty(name='divChooser'))
         sm.add_widget(GreaterSmallerChooseDifficulty(name='greaterSmallerChooser'))
-        sm.add_widget(ChallengeChooseDifficulty(name='challengeChooser'))
+        sm.add_widget(ChallengeChooseDifficulty(name='chalChooser'))
         return sm
 
 if __name__ == '__main__':
