@@ -37,7 +37,22 @@ class HelpScreen(Screen):
 
 
 class AboutScreen(Screen):
-    pass
+
+    def about_text(self):
+        return "Made by: Jonas\n" \
+               "Open source and free of charge \n" \
+               "\n" \
+               "This app has been written to help everyone to be better\n" \
+               " at mental arithmetic.\n" \
+               "\n" \
+               "Features:\n" \
+               "  - simple\n" \
+               "  - rewarding\n" \
+               "  - perfect for kids in elementary school\n" \
+               "  - or adults who want to train their brain ;)\n" \
+               "  - No ads, they only distract\n" \
+               "  - never gets old, new content is generated procedurally\n" \
+               "  - written in Python with the help of Kivy"
 
 
 class MathApp(App):

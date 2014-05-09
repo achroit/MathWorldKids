@@ -102,9 +102,26 @@
         Label:
             size_hint: 0.5, 0.15
             pos_hint: {'center_x': 0.45}
-            text: 'Progress - View all your Achievements'
+            text: 'Help Screen - Some tips to improve yourself'
         Label:
             text: root.help_text()
+        Button:
+            size_hint: 0.5, 0.1
+            pos_hint: {'center_x': 0.45}
+            text: 'back'
+            on_press: root.manager.current = 'menu'
+
+<AboutScreen>:
+    BoxLayout:
+        spacing: 25
+        padding: 25
+        orientation: 'vertical'
+        Label:
+            size_hint: 0.5, 0.15
+            pos_hint: {'center_x': 0.45}
+            text: 'About - Information about this app'
+        Label:
+            text: root.about_text()
         Button:
             size_hint: 0.5, 0.1
             pos_hint: {'center_x': 0.45}
