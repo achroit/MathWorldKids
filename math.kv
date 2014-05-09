@@ -95,6 +95,7 @@
                     height: 40
                     pos_hint: {'center_x': 0.5}
                     text: root.category1
+                    on_press: root.manager.current = 'game'
                 Button:
                     size_hint: 0.7, 1
                     height: 40
@@ -145,6 +146,31 @@
             pos_hint: {'center_x': 0.45}
             text: 'back'
             on_press: root.manager.current = 'start'
+
+<GameActionScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            size_hint: 1, 0.15
+            Label:
+                text: 'Errors: 0'
+            Label:
+                text: 'Session name'
+            Label:
+                text: 'Progress 1/10'
+        Label:
+            text: 'The current task: 5 + 5'
+        GridLayout:
+            cols: 2
+            padding: 25
+            Button:
+                text: '2'
+            Button:
+                text: '4'
+            Button:
+                text: '8'
+            Button:
+                text: '10'
 
 <ProgressScreen>:
     BoxLayout:
