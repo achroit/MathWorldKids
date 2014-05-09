@@ -2,13 +2,36 @@ from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 
 
-
 # Declare both screens
 class MenuScreen(Screen):
     pass
 
 
 class StartScreen(Screen):
+    pass
+
+
+class AddChooseDifficulty(Screen):
+    pass
+
+
+class SubChooseDifficulty(Screen):
+    pass
+
+
+class MultiChooseDifficulty(Screen):
+    pass
+
+
+class DivChooseDifficulty(Screen):
+    pass
+
+
+class GreaterSmallerChooseDifficulty(Screen):
+    pass
+
+
+class ChallengeChooseDifficulty(Screen):
     pass
 
 
