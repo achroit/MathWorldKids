@@ -3,7 +3,7 @@
 # (str) Title of your application
 title = MathWorldKids
 
-# (str) Package name
+# (str) Package name 
 package.name = mathworld
 
 # (str) Package domain (needed for android/ios packaging)
