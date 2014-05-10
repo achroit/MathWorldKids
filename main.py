@@ -111,8 +111,13 @@ class GameActionScreen(Screen):
         self.ids.button_4.text = "4"
 
         self.ids.label_1.text = "Errors: " + str(self.errors_made)
-        self.ids.label_2.text = str(self.current_mode)
+        self.ids.label_2.text = str(self.current_mode) + str(self.current_category)
         self.ids.label_3.text = str(self.round_number)
+
+    def hook_keyboard(self, window, key, *largs):
+        if key == 27:
+            self.manager.current = 'start'
+            return True
 
 
 class HelpScreen(Screen):
