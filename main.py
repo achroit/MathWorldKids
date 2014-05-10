@@ -115,10 +115,6 @@ class GameActionScreen(Screen):
         self.ids.label_3.text = str(self.round_number)
 
 
-    def lol(self):
-        print("lols")
-
-
 class HelpScreen(Screen):
 
     def help_text(self):
