@@ -95,7 +95,11 @@
                     height: 40
                     pos_hint: {'center_x': 0.5}
                     text: root.category1
-                    on_press: root.manager.current = 'game'
+                    on_press:
+                        root.manager.current = 'game'
+                        app.root.get_screen('game').current_category = 1
+                        app.root.get_screen('game').current_mode = root.name
+
                 Button:
                     size_hint: 0.7, 1
                     height: 40
@@ -148,32 +152,37 @@
             on_press: root.manager.current = 'start'
 
 <GameActionScreen>:
+    on_enter: self.thing()
     BoxLayout:
         orientation: 'vertical'
         BoxLayout:
             size_hint: 1, 0.15
             Label:
+                id: label_1
                 text: 'Errors: 0'
             Label:
+                id: label_2
                 text: 'Session name'
             Label:
+                id: label_3
                 text: 'Progress 1/10'
         Label:
+            id: task
             text: 'The current task: 5 + 5'
         GridLayout:
             cols: 2
             padding: 25
             Button:
-                id:'button_1
+                id: button_1
                 text: '2'
             Button:
-                id:'button_2
+                id: button_2
                 text: '4'
             Button:
-                id:'button_3
+                id: button_3
                 text: '8'
             Button:
-                id:'button_4
+                id: button_4
                 text: '10'
 
 <ProgressScreen>:

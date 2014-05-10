@@ -96,7 +96,27 @@ class ProgressScreen(Screen):
 class GameActionScreen(Screen):
     #TODO set properties like the type of game played, number of errors
     #TODO implement function that sets the text of the labels and the buttons
-    pass
+
+    errors_made = 0
+    round_number = 1
+
+    current_category = ""
+    current_mode = ""
+
+    def thing(self):
+        self.ids.task.text = "Rechne 4 + 0 * 1"
+        self.ids.button_1.text = "4"
+        self.ids.button_2.text = "4"
+        self.ids.button_3.text = "4"
+        self.ids.button_4.text = "4"
+
+        self.ids.label_1.text = "Errors: " + str(self.errors_made)
+        self.ids.label_2.text = str(self.current_mode)
+        self.ids.label_3.text = str(self.round_number)
+
+
+    def lol(self):
+        print("lols")
 
 
 class HelpScreen(Screen):
