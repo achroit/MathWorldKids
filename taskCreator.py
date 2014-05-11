@@ -2,6 +2,9 @@ import random
 
 
 def add_task(difficulty=1):
+    #TODO: disallow the same 2 answers,
+    #TODO prevent two times the same task
+    #TODO: remove the overwhelming presence of 0's
     operand_1 = 0
     operand_2 = 0
     option_1 = 0

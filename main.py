@@ -96,9 +96,6 @@ class ProgressScreen(Screen):
 
 
 class GameActionScreen(Screen):
-    #TODO set properties like the type of game played, number of errors
-    #TODO implement function that sets the text of the labels and the buttons
-
     errors_made = 0
     round_number = 1
     max_rounds = 10
