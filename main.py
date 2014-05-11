@@ -19,11 +19,11 @@ class AddChooseDifficulty(Screen):
     category3 = "Up to 15"
     category4 = "Up to 20"
     category5 = "Up to 25"
-    category6 = "Up to 35"
-    category7 = "Up to 50"
-    category8 = "Up to 65"
-    category9 = "Up to 75"
-    category10 = "Up to 100"
+    category6 = "Up to 50"
+    category7 = "Up to 75"
+    category8 = "Up to 100"
+    category9 = "Up to 500"
+    category10 = "Up to 1000"
 
 
 class SubChooseDifficulty(Screen):
