@@ -137,6 +137,8 @@ class GameActionScreen(Screen):
     def check_answer(self, button_pressed):
         if self.current_mode == "addChooser":
             if int(button_pressed.text) == self.task_values[0] + self.task_values[1]:
+                self.round_number += 1
+                self.ids.label_3.text = str(self.round_number) + " / " + str(self.max_rounds)
                 self.set_next_task()
             else:
                 self.errors_made += 1
