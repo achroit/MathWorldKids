@@ -11,19 +11,19 @@
             orientation: 'vertical'
             Button:
                 text: 'Start'
-                on_press: root.manager.current = 'start'
+                on_release: root.manager.current = 'start'
             Button:
                 text: 'Achievements'
-                on_press: root.manager.current = 'progress'
+                on_release: root.manager.current = 'progress'
             Button:
                 text: 'Tips & Tricks'
-                on_press: root.manager.current = 'help'
+                on_release: root.manager.current = 'help'
             Button:
                 text: 'About'
-                on_press: root.manager.current = 'about'
+                on_release: root.manager.current = 'about'
             Button:
                 text: 'Quit'
-                on_press: exit()
+                on_release: exit()
 
 <StartScreen>:
     BoxLayout:
@@ -41,37 +41,37 @@
                 size_hint: 0.7, 1
                 pos_hint: {'center_x': 0.5}
                 text: 'add'
-                on_press: root.manager.current = 'addChooser'
+                on_release: root.manager.current = 'addChooser'
             Button:
                 size_hint: 0.7, 1
                 pos_hint: {'center_x': 0.5}
                 text: 'subtract'
-                on_press: root.manager.current = 'subChooser'
+                on_release: root.manager.current = 'subChooser'
             Button:
                 size_hint: 0.7, 1
                 pos_hint: {'center_x': 0.5}
                 text: 'multiply'
-                on_press: root.manager.current = 'multiChooser'
+                on_release: root.manager.current = 'multiChooser'
             Button:
                 size_hint: 0.7, 1
                 pos_hint: {'center_x': 0.5}
                 text: 'division'
-                on_press: root.manager.current = 'divChooser'
+                on_release: root.manager.current = 'divChooser'
             Button:
                 size_hint: 0.7, 1
                 pos_hint: {'center_x': 0.5}
                 text: 'greater/smaller'
-                on_press: root.manager.current = 'greaterSmallerChooser'
+                on_release: root.manager.current = 'greaterSmallerChooser'
             Button:
                 size_hint: 0.7, 1
                 pos_hint: {'center_x': 0.5}
                 text: 'Challenge'
-                on_press: root.manager.current = 'challengeChooser'
+                on_release: root.manager.current = 'challengeChooser'
         Button:
             size_hint: 0.5, 0.1
             pos_hint: {'center_x': 0.45}
             text: 'back'
-            on_press: root.manager.current = 'menu'
+            on_release: root.manager.current = 'menu'
 
 <AddChooseDifficulty,SubChooseDifficulty,MultiChooseDifficulty,DivChooseDifficulty,GreaterSmallerChooseDifficulty,ChallengeChooseDifficulty>:
     BoxLayout:
@@ -94,7 +94,7 @@
                     height: 40
                     pos_hint: {'center_x': 0.5}
                     text: root.category1
-                    on_press:
+                    on_release:
                         root.manager.current = 'game'
                         app.root.get_screen('game').current_category = 1
                         app.root.get_screen('game').current_mode = root.name
@@ -103,7 +103,7 @@
                     height: 40
                     pos_hint: {'center_x': 0.5}
                     text: root.category2
-                    on_press:
+                    on_release:
                         root.manager.current = 'game'
                         app.root.get_screen('game').current_category = 2
                         app.root.get_screen('game').current_mode = root.name
@@ -112,7 +112,7 @@
                     height: 40
                     pos_hint: {'center_x': 0.5}
                     text: root.category3
-                    on_press:
+                    on_release:
                         root.manager.current = 'game'
                         app.root.get_screen('game').current_category = 3
                         app.root.get_screen('game').current_mode = root.name
@@ -121,7 +121,7 @@
                     height: 40
                     pos_hint: {'center_x': 0.5}
                     text: root.category4
-                    on_press:
+                    on_release:
                         root.manager.current = 'game'
                         app.root.get_screen('game').current_category = 4
                         app.root.get_screen('game').current_mode = root.name
@@ -130,7 +130,7 @@
                     height: 40
                     pos_hint: {'center_x': 0.5}
                     text: root.category5
-                    on_press:
+                    on_release:
                         root.manager.current = 'game'
                         app.root.get_screen('game').current_category = 5
                         app.root.get_screen('game').current_mode = root.name
@@ -139,7 +139,7 @@
                     height: 40
                     pos_hint: {'center_x': 0.5}
                     text: root.category6
-                    on_press:
+                    on_release:
                         root.manager.current = 'game'
                         app.root.get_screen('game').current_category = 6
                         app.root.get_screen('game').current_mode = root.name
@@ -148,7 +148,7 @@
                     height: 40
                     pos_hint: {'center_x': 0.5}
                     text: root.category7
-                    on_press:
+                    on_release:
                         root.manager.current = 'game'
                         app.root.get_screen('game').current_category = 7
                         app.root.get_screen('game').current_mode = root.name
@@ -157,7 +157,7 @@
                     height: 40
                     pos_hint: {'center_x': 0.5}
                     text: root.category8
-                    on_press:
+                    on_release:
                         root.manager.current = 'game'
                         app.root.get_screen('game').current_category = 8
                         app.root.get_screen('game').current_mode = root.name
@@ -166,7 +166,7 @@
                     height: 40
                     pos_hint: {'center_x': 0.5}
                     text: root.category9
-                    on_press:
+                    on_release:
                         root.manager.current = 'game'
                         app.root.get_screen('game').current_category = 9
                         app.root.get_screen('game').current_mode = root.name
@@ -175,7 +175,7 @@
                     height: 40
                     pos_hint: {'center_x': 0.5}
                     text: root.category10
-                    on_press:
+                    on_release:
                         root.manager.current = 'game'
                         app.root.get_screen('game').current_category = 10
                         app.root.get_screen('game').current_mode = root.name
@@ -183,7 +183,7 @@
             size_hint: 0.5, 0.1
             pos_hint: {'center_x': 0.45}
             text: 'back'
-            on_press: root.manager.current = 'start'
+            on_release: root.manager.current = 'start'
 
 <GameActionScreen>:
     on_enter: self.thing()
@@ -246,7 +246,7 @@
             size_hint: 0.5, 0.1
             pos_hint: {'center_x': 0.45}
             text: 'back'
-            on_press: root.manager.current = 'menu'
+            on_release: root.manager.current = 'menu'
 
 <HelpScreen>:
     BoxLayout:
@@ -263,7 +263,7 @@
             size_hint: 0.5, 0.1
             pos_hint: {'center_x': 0.45}
             text: 'back'
-            on_press: root.manager.current = 'menu'
+            on_release: root.manager.current = 'menu'
 
 <AboutScreen>:
     BoxLayout:
@@ -280,4 +280,4 @@
             size_hint: 0.5, 0.1
             pos_hint: {'center_x': 0.45}
             text: 'back'
-            on_press: root.manager.current = 'menu'
+            on_release: root.manager.current = 'menu'
