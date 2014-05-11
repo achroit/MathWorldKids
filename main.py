@@ -1,6 +1,7 @@
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from kivy.core.window import Window
+import taskCreator
 
 
 # Declare both screens
@@ -104,8 +105,24 @@ class GameActionScreen(Screen):
     current_category = ""
     current_mode = ""
 
-    def thing(self):
-        self.ids.task.text = "Rechne 4 + 0 * 1"
+    def set_next_task(self):
+        task_values = (0, 0)
+        operator = ""
+        if self.current_mode == "addChooser":
+            task_values = taskCreator.add_task(int(self.current_category))
+            operator = "+"
+        elif self.current_mode == "subChooser":
+            pass
+        elif self.current_mode == "multiChooser":
+            pass
+        elif self.current_mode == "divChooser":
+            pass
+        elif self.current_mode == "greaterSmallerChooser":
+            pass
+        elif self.current_mode == "challengeChooser":
+            pass
+
+        self.ids.task.text = str(task_values[0]) + " " + operator + " " + str(task_values[1])
         self.ids.button_1.text = "4"
         self.ids.button_2.text = "4"
         self.ids.button_3.text = "4"
