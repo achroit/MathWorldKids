@@ -285,3 +285,10 @@
             pos_hint: {'center_x': 0.45}
             text: 'back'
             on_release: root.manager.current = 'menu'
+
+<ResultScreen>:
+    Label:
+        text: 'Well Done!'
+    Button:
+        text: 'Continue'
+        on_release: root.manager.current = 'start'

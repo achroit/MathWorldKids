@@ -154,6 +154,13 @@ class GameActionScreen(Screen):
         elif self.current_mode == "challengeChooser":
             pass
 
+        if self.round_number == self.max_rounds:
+            self.manager.current = 'result'
+
+
+class ResultScreen(Screen):
+    pass
+
 
 class HelpScreen(Screen):
 
@@ -213,6 +220,7 @@ class MathApp(App):
         self.sm.add_widget(GreaterSmallerChooseDifficulty(name='greaterSmallerChooser'))
         self.sm.add_widget(ChallengeChooseDifficulty(name='challengeChooser'))
         self.sm.add_widget(GameActionScreen(name='game'))
+        self.sm.add_widget(ResultScreen(name='result'))
 
         #Bind to keyboard to make the back button under android work
         Window.bind(on_keyboard=self.handle_keyboard)
