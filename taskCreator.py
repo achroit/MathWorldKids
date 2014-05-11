@@ -75,6 +75,6 @@ def add_task(difficulty=1):
     operands = [operand_1, operand_2]
     answers = [option_1, option_2, option_3, option_4]
     random.shuffle(operands)
-    sorted(answers)
+    answers.sort()
     whole_task = operands + answers
     return whole_task

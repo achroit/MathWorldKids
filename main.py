@@ -103,14 +103,15 @@ class GameActionScreen(Screen):
     round_number = 1
     max_rounds = 10
 
+    task_values = 0
+
     current_category = ""
     current_mode = ""
 
     def set_next_task(self):
-        task_values = (0, 0)
         operator = ""
         if self.current_mode == "addChooser":
-            task_values = taskCreator.add_task(int(self.current_category))
+            self.task_values = taskCreator.add_task(int(self.current_category))
             operator = "+"
         elif self.current_mode == "subChooser":
             pass
@@ -123,15 +124,32 @@ class GameActionScreen(Screen):
         elif self.current_mode == "challengeChooser":
             pass
 
-        self.ids.task.text = str(task_values[0]) + " " + operator + " " + str(task_values[1])
-        self.ids.button_1.text = str(task_values[2])
-        self.ids.button_2.text = str(task_values[3])
-        self.ids.button_3.text = str(task_values[4])
-        self.ids.button_4.text = str(task_values[5])
+        self.ids.task.text = str(self.task_values[0]) + " " + operator + " " + str(self.task_values[1])
+        self.ids.button_1.text = str(self.task_values[2])
+        self.ids.button_2.text = str(self.task_values[3])
+        self.ids.button_3.text = str(self.task_values[4])
+        self.ids.button_4.text = str(self.task_values[5])
 
         self.ids.label_1.text = "Errors: " + str(self.errors_made)
         self.ids.label_2.text = str(self.current_mode) + str(self.current_category)
         self.ids.label_3.text = str(self.round_number) + " / " + str(self.max_rounds)
+
+    def check_answer(self, button_pressed):
+        if self.current_mode == "addChooser":
+            if int(button_pressed.text) == self.task_values[0] + self.task_values[1]:
+                self.set_next_task()
+            else:
+                self.errors_made += 1
+        elif self.current_mode == "subChooser":
+            pass
+        elif self.current_mode == "multiChooser":
+            pass
+        elif self.current_mode == "divChooser":
+            pass
+        elif self.current_mode == "greaterSmallerChooser":
+            pass
+        elif self.current_mode == "challengeChooser":
+            pass
 
 
 class HelpScreen(Screen):
