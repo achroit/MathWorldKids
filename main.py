@@ -101,6 +101,7 @@ class GameActionScreen(Screen):
 
     errors_made = 0
     round_number = 1
+    max_rounds = 10
 
     current_category = ""
     current_mode = ""
@@ -123,14 +124,14 @@ class GameActionScreen(Screen):
             pass
 
         self.ids.task.text = str(task_values[0]) + " " + operator + " " + str(task_values[1])
-        self.ids.button_1.text = "4"
-        self.ids.button_2.text = "4"
-        self.ids.button_3.text = "4"
-        self.ids.button_4.text = "4"
+        self.ids.button_1.text = str(task_values[2])
+        self.ids.button_2.text = str(task_values[3])
+        self.ids.button_3.text = str(task_values[4])
+        self.ids.button_4.text = str(task_values[5])
 
         self.ids.label_1.text = "Errors: " + str(self.errors_made)
         self.ids.label_2.text = str(self.current_mode) + str(self.current_category)
-        self.ids.label_3.text = str(self.round_number)
+        self.ids.label_3.text = str(self.round_number) + " / " + str(self.max_rounds)
 
 
 class HelpScreen(Screen):
