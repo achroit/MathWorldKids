@@ -1,5 +1,6 @@
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
+from kivy.core.window import Window
 
 
 # Declare both screens
@@ -114,10 +115,7 @@ class GameActionScreen(Screen):
         self.ids.label_2.text = str(self.current_mode) + str(self.current_category)
         self.ids.label_3.text = str(self.round_number)
 
-    def hook_keyboard(self, window, key, *largs):
-        if key == 27:
-            self.manager.current = 'start'
-            return True
+
 
 
 class HelpScreen(Screen):
@@ -162,21 +160,32 @@ class AboutScreen(Screen):
 
 class MathApp(App):
 
+    sm = ScreenManager(transition=FadeTransition())
+
     def build(self):
-        sm = ScreenManager(transition=FadeTransition())
-        sm.add_widget(MenuScreen(name='menu'))
-        sm.add_widget(StartScreen(name='start'))
-        sm.add_widget(ProgressScreen(name='progress'))
-        sm.add_widget(HelpScreen(name='help'))
-        sm.add_widget(AboutScreen(name='about'))
-        sm.add_widget(AddChooseDifficulty(name='addChooser'))
-        sm.add_widget(SubChooseDifficulty(name='subChooser'))
-        sm.add_widget(MultiChooseDifficulty(name='multiChooser'))
-        sm.add_widget(DivChooseDifficulty(name='divChooser'))
-        sm.add_widget(GreaterSmallerChooseDifficulty(name='greaterSmallerChooser'))
-        sm.add_widget(ChallengeChooseDifficulty(name='challengeChooser'))
-        sm.add_widget(GameActionScreen(name='game'))
-        return sm
+
+        self.sm.add_widget(MenuScreen(name='menu'))
+        self.sm.add_widget(StartScreen(name='start'))
+        self.sm.add_widget(ProgressScreen(name='progress'))
+        self.sm.add_widget(HelpScreen(name='help'))
+        self.sm.add_widget(AboutScreen(name='about'))
+        self.sm.add_widget(AddChooseDifficulty(name='addChooser'))
+        self.sm.add_widget(SubChooseDifficulty(name='subChooser'))
+        self.sm.add_widget(MultiChooseDifficulty(name='multiChooser'))
+        self.sm.add_widget(DivChooseDifficulty(name='divChooser'))
+        self.sm.add_widget(GreaterSmallerChooseDifficulty(name='greaterSmallerChooser'))
+        self.sm.add_widget(ChallengeChooseDifficulty(name='challengeChooser'))
+        self.sm.add_widget(GameActionScreen(name='game'))
+
+        #Bind to keyboard to make the back button under android work
+        Window.bind(on_keyboard=self.handle_keyboard)
+
+        return self.sm
+
+    def handle_keyboard(self, window, key, *largs):
+        if key == 27:
+            self.sm.current = 'start'
+            return True
 
 if __name__ == '__main__':
     MathApp().run()
