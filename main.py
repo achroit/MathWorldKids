@@ -140,6 +140,7 @@ class GameActionScreen(Screen):
                 self.set_next_task()
             else:
                 self.errors_made += 1
+                self.ids.label_1.text = "Errors: " + str(self.errors_made)
         elif self.current_mode == "subChooser":
             pass
         elif self.current_mode == "multiChooser":

@@ -2,6 +2,12 @@ import random
 
 
 def add_task(difficulty=1):
+    operand_1 = 0
+    operand_2 = 0
+    option_1 = 0
+    option_2 = 0
+    option_3 = 0
+    option_4 = 0
     if difficulty == 1:
         operand_1 = random.randint(0, 5)
         operand_2 = random.randint(0, 5)
