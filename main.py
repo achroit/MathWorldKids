@@ -100,7 +100,7 @@ class GameActionScreen(Screen):
     round_number = 1
     max_rounds = 10
 
-    task_values = 0
+    task_values = [0, 0, 0, 0, 0, 0]
 
     current_category = ""
     current_mode = ""
