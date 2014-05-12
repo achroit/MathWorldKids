@@ -205,6 +205,8 @@ class AboutScreen(Screen):
                "  - never gets old, new content is generated procedurally\n" \
                "  - written in Python with the help of Kivy"
 
+class ComingSoonScreen(Screen):
+    pass
 
 class MathApp(App):
 
@@ -225,7 +227,7 @@ class MathApp(App):
         self.sm.add_widget(ChallengeChooseDifficulty(name='challengeChooser'))
         self.sm.add_widget(GameActionScreen(name='game'))
         self.sm.add_widget(ResultScreen(name='result'))
-
+        self.sm.add_widget(ComingSoonScreen(name='comingsoon'))
         #Bind to keyboard to make the back button under android work
         Window.bind(on_keyboard=self.handle_keyboard)
 
