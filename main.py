@@ -134,7 +134,9 @@ class GameActionScreen(Screen):
 
     def check_answer(self, button_pressed):
         if self.current_mode == "addChooser":
-            if int(button_pressed.text) == self.task_values[0] + self.task_values[1]:
+            if self.round_number == self.max_rounds:
+                self.manager.current = 'result'
+            elif int(button_pressed.text) == self.task_values[0] + self.task_values[1]:
                 self.round_number += 1
                 self.ids.label_3.text = str(self.round_number) + " / " + str(self.max_rounds)
                 self.set_next_task()
@@ -144,7 +146,9 @@ class GameActionScreen(Screen):
         elif self.current_mode == "subChooser":
             pass
         elif self.current_mode == "multiChooser":
-            if int(button_pressed.text) == self.task_values[0] * self.task_values[1]:
+            if self.round_number == self.max_rounds:
+                self.manager.current = 'result'
+            elif int(button_pressed.text) == self.task_values[0] * self.task_values[1]:
                 self.round_number += 1
                 self.ids.label_3.text = str(self.round_number) + " / " + str(self.max_rounds)
                 self.set_next_task()
@@ -157,9 +161,6 @@ class GameActionScreen(Screen):
             pass
         elif self.current_mode == "challengeChooser":
             pass
-
-        if self.round_number == self.max_rounds:
-            self.manager.current = 'result'
 
 
 class ResultScreen(Screen):
