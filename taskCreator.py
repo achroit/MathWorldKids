@@ -87,3 +87,91 @@ def add_task(difficulty=1):
     answers.sort()
     whole_task = operands + answers
     return whole_task
+
+
+def multi_task(difficulty=1):
+    #TODO: disallow the same 2 answers,
+    #TODO prevent two times the same task
+    #TODO: remove the overwhelming presence of 0's
+    operand_1 = 0
+    operand_2 = 0
+    option_1 = 0
+    option_2 = 0
+    option_3 = 0
+    option_4 = 0
+    if difficulty == 1:
+        operand_1 = random.randint(0, 2)
+        operand_2 = random.randint(0, 10)
+        option_1 = operand_1 * operand_2
+        option_2 = random.randint(0, 2) * random.randint(0, 10)
+        option_3 = random.randint(0, 2) * random.randint(0, 10)
+        option_4 = random.randint(0, 2) * random.randint(0, 10)
+    elif difficulty == 2:
+        operand_1 = random.randint(0, 3)
+        operand_2 = random.randint(0, 10)
+        option_1 = operand_1 * operand_2
+        option_2 = random.randint(0, 3) * random.randint(0, 10)
+        option_3 = random.randint(0, 3) * random.randint(0, 10)
+        option_4 = random.randint(0, 3) * random.randint(0, 10)
+    elif difficulty == 3:
+        operand_1 = random.randint(0, 4)
+        operand_2 = random.randint(0, 10)
+        option_1 = operand_1 * operand_2
+        option_2 = random.randint(0, 4) * random.randint(0, 10)
+        option_3 = random.randint(0, 4) * random.randint(0, 10)
+        option_4 = random.randint(0, 4) * random.randint(0, 10)
+    elif difficulty == 4:
+        operand_1 = random.randint(0, 5)
+        operand_2 = random.randint(0, 10)
+        option_1 = operand_1 * operand_2
+        option_2 = random.randint(0, 5) * random.randint(0, 10)
+        option_3 = random.randint(0, 5) * random.randint(0, 10)
+        option_4 = random.randint(0, 5) * random.randint(0, 10)
+    elif difficulty == 5:
+        operand_1 = random.randint(0, 6)
+        operand_2 = random.randint(0, 10)
+        option_1 = operand_1 * operand_2
+        option_2 = random.randint(0, 6) * random.randint(0, 10)
+        option_3 = random.randint(0, 6) * random.randint(0, 10)
+        option_4 = random.randint(0, 6) * random.randint(0, 10)
+    elif difficulty == 6:
+        operand_1 = random.randint(0, 7)
+        operand_2 = random.randint(0, 10)
+        option_1 = operand_1 * operand_2
+        option_2 = random.randint(0, 7) * random.randint(0, 10)
+        option_3 = random.randint(0, 7) * random.randint(0, 10)
+        option_4 = random.randint(0, 7) * random.randint(0, 10)
+    elif difficulty == 7:
+        operand_1 = random.randint(0, 8)
+        operand_2 = random.randint(0, 10)
+        option_1 = operand_1 * operand_2
+        option_2 = random.randint(0, 8) * random.randint(0, 10)
+        option_3 = random.randint(0, 8) * random.randint(0, 10)
+        option_4 = random.randint(0, 8) * random.randint(0, 10)
+    elif difficulty == 8:
+        operand_1 = random.randint(0, 9)
+        operand_2 = random.randint(0, 10)
+        option_1 = operand_1 * operand_2
+        option_2 = random.randint(0, 9) * random.randint(0, 10)
+        option_3 = random.randint(0, 9) * random.randint(0, 10)
+        option_4 = random.randint(0, 9) * random.randint(0, 10)
+    elif difficulty == 9:
+        operand_1 = random.randint(0, 10)
+        operand_2 = random.randint(0, 10)
+        option_1 = operand_1 * operand_2
+        option_2 = random.randint(0, 10) * random.randint(0, 10)
+        option_3 = random.randint(0, 10) * random.randint(0, 10)
+        option_4 = random.randint(0, 10) * random.randint(0, 10)
+    elif difficulty >= 10:
+        operand_1 = random.randint(0, 12)
+        operand_2 = random.randint(0, 12)
+        option_1 = operand_1 * operand_2
+        option_2 = random.randint(0, 12) * random.randint(0, 12)
+        option_3 = random.randint(0, 12) * random.randint(0, 12)
+        option_4 = random.randint(0, 12) * random.randint(0, 12)
+    operands = [operand_1, operand_2]
+    answers = [option_1, option_2, option_3, option_4]
+    random.shuffle(operands)
+    answers.sort()
+    whole_task = operands + answers
+    return whole_task

@@ -113,7 +113,8 @@ class GameActionScreen(Screen):
         elif self.current_mode == "subChooser":
             pass
         elif self.current_mode == "multiChooser":
-            pass
+            self.task_values = taskCreator.multi_task(int(self.current_category))
+            operator = "*"
         elif self.current_mode == "divChooser":
             pass
         elif self.current_mode == "greaterSmallerChooser":
@@ -143,7 +144,13 @@ class GameActionScreen(Screen):
         elif self.current_mode == "subChooser":
             pass
         elif self.current_mode == "multiChooser":
-            pass
+            if int(button_pressed.text) == self.task_values[0] * self.task_values[1]:
+                self.round_number += 1
+                self.ids.label_3.text = str(self.round_number) + " / " + str(self.max_rounds)
+                self.set_next_task()
+            else:
+                self.errors_made += 1
+                self.ids.label_1.text = "Errors: " + str(self.errors_made)
         elif self.current_mode == "divChooser":
             pass
         elif self.current_mode == "greaterSmallerChooser":
