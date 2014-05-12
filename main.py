@@ -105,6 +105,10 @@ class GameActionScreen(Screen):
     current_category = ""
     current_mode = ""
 
+    def new_game(self):
+        self.round_number = 0
+        self.set_next_task()
+
     def set_next_task(self):
         operator = ""
         if self.current_mode == "addChooser":
