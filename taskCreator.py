@@ -2,9 +2,6 @@ import random
 
 
 def add_task(difficulty=1):
-    #TODO: disallow the same 2 answers,
-    #TODO prevent two times the same task
-    #TODO: remove the overwhelming presence of 0's
     operand_1 = 0
     operand_2 = 0
     option_1 = 0
@@ -85,10 +82,8 @@ def add_task(difficulty=1):
             option_3 = random.randint(0, 1000) + random.randint(0, 1000)
             option_4 = random.randint(0, 1000) + random.randint(0, 1000)
 
-        print("tried:", option_1, option_2, option_3, option_4)
         not_done = (option_1 == option_2) or (option_1 == option_3) or (option_1 == option_4) or\
                    (option_2 == option_3) or (option_2 == option_4) or (option_3 == option_4)
-    print("Done:", option_1, option_2, option_3, option_4)
 
     operands = [operand_1, operand_2]
     answers = [option_1, option_2, option_3, option_4]
@@ -99,9 +94,6 @@ def add_task(difficulty=1):
 
 
 def sub_task(difficulty=1):
-    #TODO: disallow the same 2 answers,
-    #TODO prevent two times the same task
-    #TODO: remove the overwhelming presence of 0's
     operand_1 = 0
     operand_2 = 0
     option_1 = 0
@@ -198,10 +190,8 @@ def sub_task(difficulty=1):
             option_3 = random.randint(0, 1000) - random.randint(0, 1000)
             option_4 = random.randint(0, 1000) - random.randint(0, 1000)
 
-        print("tried:", option_1, option_2, option_3, option_4)
         not_done = (option_1 == option_2) or (option_1 == option_3) or (option_1 == option_4) or\
                    (option_2 == option_3) or (option_2 == option_4) or (option_3 == option_4)
-    print("Done:", option_1, option_2, option_3, option_4)
 
     answers = [option_1, option_2, option_3, option_4]
     answers.sort()
@@ -210,85 +200,88 @@ def sub_task(difficulty=1):
 
 
 def multi_task(difficulty=1):
-    #TODO: disallow the same 2 answers,
-    #TODO prevent two times the same task
-    #TODO: remove the overwhelming presence of 0's
     operand_1 = 0
     operand_2 = 0
     option_1 = 0
     option_2 = 0
     option_3 = 0
     option_4 = 0
-    if difficulty == 1:
-        operand_1 = random.randint(0, 2)
-        operand_2 = random.randint(0, 10)
-        option_1 = operand_1 * operand_2
-        option_2 = random.randint(0, 2) * random.randint(0, 10)
-        option_3 = random.randint(0, 2) * random.randint(0, 10)
-        option_4 = random.randint(0, 2) * random.randint(0, 10)
-    elif difficulty == 2:
-        operand_1 = random.randint(0, 3)
-        operand_2 = random.randint(0, 10)
-        option_1 = operand_1 * operand_2
-        option_2 = random.randint(0, 3) * random.randint(0, 10)
-        option_3 = random.randint(0, 3) * random.randint(0, 10)
-        option_4 = random.randint(0, 3) * random.randint(0, 10)
-    elif difficulty == 3:
-        operand_1 = random.randint(0, 4)
-        operand_2 = random.randint(0, 10)
-        option_1 = operand_1 * operand_2
-        option_2 = random.randint(0, 4) * random.randint(0, 10)
-        option_3 = random.randint(0, 4) * random.randint(0, 10)
-        option_4 = random.randint(0, 4) * random.randint(0, 10)
-    elif difficulty == 4:
-        operand_1 = random.randint(0, 5)
-        operand_2 = random.randint(0, 10)
-        option_1 = operand_1 * operand_2
-        option_2 = random.randint(0, 5) * random.randint(0, 10)
-        option_3 = random.randint(0, 5) * random.randint(0, 10)
-        option_4 = random.randint(0, 5) * random.randint(0, 10)
-    elif difficulty == 5:
-        operand_1 = random.randint(0, 6)
-        operand_2 = random.randint(0, 10)
-        option_1 = operand_1 * operand_2
-        option_2 = random.randint(0, 6) * random.randint(0, 10)
-        option_3 = random.randint(0, 6) * random.randint(0, 10)
-        option_4 = random.randint(0, 6) * random.randint(0, 10)
-    elif difficulty == 6:
-        operand_1 = random.randint(0, 7)
-        operand_2 = random.randint(0, 10)
-        option_1 = operand_1 * operand_2
-        option_2 = random.randint(0, 7) * random.randint(0, 10)
-        option_3 = random.randint(0, 7) * random.randint(0, 10)
-        option_4 = random.randint(0, 7) * random.randint(0, 10)
-    elif difficulty == 7:
-        operand_1 = random.randint(0, 8)
-        operand_2 = random.randint(0, 10)
-        option_1 = operand_1 * operand_2
-        option_2 = random.randint(0, 8) * random.randint(0, 10)
-        option_3 = random.randint(0, 8) * random.randint(0, 10)
-        option_4 = random.randint(0, 8) * random.randint(0, 10)
-    elif difficulty == 8:
-        operand_1 = random.randint(0, 9)
-        operand_2 = random.randint(0, 10)
-        option_1 = operand_1 * operand_2
-        option_2 = random.randint(0, 9) * random.randint(0, 10)
-        option_3 = random.randint(0, 9) * random.randint(0, 10)
-        option_4 = random.randint(0, 9) * random.randint(0, 10)
-    elif difficulty == 9:
-        operand_1 = random.randint(0, 10)
-        operand_2 = random.randint(0, 10)
-        option_1 = operand_1 * operand_2
-        option_2 = random.randint(0, 10) * random.randint(0, 10)
-        option_3 = random.randint(0, 10) * random.randint(0, 10)
-        option_4 = random.randint(0, 10) * random.randint(0, 10)
-    elif difficulty >= 10:
-        operand_1 = random.randint(0, 12)
-        operand_2 = random.randint(0, 12)
-        option_1 = operand_1 * operand_2
-        option_2 = random.randint(0, 12) * random.randint(0, 12)
-        option_3 = random.randint(0, 12) * random.randint(0, 12)
-        option_4 = random.randint(0, 12) * random.randint(0, 12)
+    not_done = True
+    while not_done:
+        if difficulty == 1:
+            operand_1 = random.randint(0, 2)
+            operand_2 = random.randint(0, 10)
+            option_1 = operand_1 * operand_2
+            option_2 = random.randint(0, 2) * random.randint(0, 10)
+            option_3 = random.randint(0, 2) * random.randint(0, 10)
+            option_4 = random.randint(0, 2) * random.randint(0, 10)
+        elif difficulty == 2:
+            operand_1 = random.randint(0, 3)
+            operand_2 = random.randint(0, 10)
+            option_1 = operand_1 * operand_2
+            option_2 = random.randint(0, 3) * random.randint(0, 10)
+            option_3 = random.randint(0, 3) * random.randint(0, 10)
+            option_4 = random.randint(0, 3) * random.randint(0, 10)
+        elif difficulty == 3:
+            operand_1 = random.randint(0, 4)
+            operand_2 = random.randint(0, 10)
+            option_1 = operand_1 * operand_2
+            option_2 = random.randint(0, 4) * random.randint(0, 10)
+            option_3 = random.randint(0, 4) * random.randint(0, 10)
+            option_4 = random.randint(0, 4) * random.randint(0, 10)
+        elif difficulty == 4:
+            operand_1 = random.randint(0, 5)
+            operand_2 = random.randint(0, 10)
+            option_1 = operand_1 * operand_2
+            option_2 = random.randint(0, 5) * random.randint(0, 10)
+            option_3 = random.randint(0, 5) * random.randint(0, 10)
+            option_4 = random.randint(0, 5) * random.randint(0, 10)
+        elif difficulty == 5:
+            operand_1 = random.randint(0, 6)
+            operand_2 = random.randint(0, 10)
+            option_1 = operand_1 * operand_2
+            option_2 = random.randint(0, 6) * random.randint(0, 10)
+            option_3 = random.randint(0, 6) * random.randint(0, 10)
+            option_4 = random.randint(0, 6) * random.randint(0, 10)
+        elif difficulty == 6:
+            operand_1 = random.randint(0, 7)
+            operand_2 = random.randint(0, 10)
+            option_1 = operand_1 * operand_2
+            option_2 = random.randint(0, 7) * random.randint(0, 10)
+            option_3 = random.randint(0, 7) * random.randint(0, 10)
+            option_4 = random.randint(0, 7) * random.randint(0, 10)
+        elif difficulty == 7:
+            operand_1 = random.randint(0, 8)
+            operand_2 = random.randint(0, 10)
+            option_1 = operand_1 * operand_2
+            option_2 = random.randint(0, 8) * random.randint(0, 10)
+            option_3 = random.randint(0, 8) * random.randint(0, 10)
+            option_4 = random.randint(0, 8) * random.randint(0, 10)
+        elif difficulty == 8:
+            operand_1 = random.randint(0, 9)
+            operand_2 = random.randint(0, 10)
+            option_1 = operand_1 * operand_2
+            option_2 = random.randint(0, 9) * random.randint(0, 10)
+            option_3 = random.randint(0, 9) * random.randint(0, 10)
+            option_4 = random.randint(0, 9) * random.randint(0, 10)
+        elif difficulty == 9:
+            operand_1 = random.randint(0, 10)
+            operand_2 = random.randint(0, 10)
+            option_1 = operand_1 * operand_2
+            option_2 = random.randint(0, 10) * random.randint(0, 10)
+            option_3 = random.randint(0, 10) * random.randint(0, 10)
+            option_4 = random.randint(0, 10) * random.randint(0, 10)
+        elif difficulty >= 10:
+            operand_1 = random.randint(0, 12)
+            operand_2 = random.randint(0, 12)
+            option_1 = operand_1 * operand_2
+            option_2 = random.randint(0, 12) * random.randint(0, 12)
+            option_3 = random.randint(0, 12) * random.randint(0, 12)
+            option_4 = random.randint(0, 12) * random.randint(0, 12)
+
+        not_done = (option_1 == option_2) or (option_1 == option_3) or (option_1 == option_4) or\
+                   (option_2 == option_3) or (option_2 == option_4) or (option_3 == option_4)
+
     operands = [operand_1, operand_2]
     answers = [option_1, option_2, option_3, option_4]
     random.shuffle(operands)
@@ -298,25 +291,37 @@ def multi_task(difficulty=1):
 
 
 def div_task(difficulty=1):
-    values1 = multi_task(difficulty)
-    values2 = multi_task(difficulty)
-    values3 = multi_task(difficulty)
-    values4 = multi_task(difficulty)
+    not_done = True
+    while not_done:
+        values1 = multi_task(difficulty)
+        values2 = multi_task(difficulty)
+        values3 = multi_task(difficulty)
+        values4 = multi_task(difficulty)
 
-    if values1[0] == 0:
-        values1[0] = 1
-    elif values1[1] == 0:
-        values1[1] = 1
+        if values1[0] == 0:
+            values1[0] = 1
+        elif values1[1] == 0:
+            values1[1] = 1
 
-    operand1 = values1[0] * values1[1]
-    if random.randint(0, 1):
-        operand2 = values1[0]
-        solution = values1[1]
-    else:
-        operand2 = values1[1]
-        solution = values1[0]
+        operand_1 = values1[0] * values1[1]
+        if random.randint(0, 1):
+            operand_2 = values1[0]
+            solution = values1[1]
+        else:
+            operand_2 = values1[1]
+            solution = values1[0]
 
-    return[operand1, operand2] + sorted([solution, values2[random.randint(0, 1)],
-                                    values3[random.randint(0, 1)], values4[random.randint(0, 1)]])
+        option_1 = solution
+        option_2 = values2[random.randint(0, 1)]
+        option_3 = values3[random.randint(0, 1)]
+        option_4 = values4[random.randint(0, 1)]
 
+        not_done = (option_1 == option_2) or (option_1 == option_3) or (option_1 == option_4) or\
+                   (option_2 == option_3) or (option_2 == option_4) or (option_3 == option_4)
 
+    operands = [operand_1, operand_2]
+    answers = [option_1, option_2, option_3, option_4]
+    answers.sort()
+    whole_task = operands + answers
+
+    return whole_task
