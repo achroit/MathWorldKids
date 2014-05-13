@@ -182,8 +182,7 @@ def sub_task(difficulty=1):
         operands = [operand_1, operand_2]
         option_1 = operands[0] - operands[1]
         option_2 = random.randint(0, 1000) - random.randint(0, 1000)
-        opti
-        on_3 = random.randint(0, 1000) - random.randint(0, 1000)
+        option_3 = random.randint(0, 1000) - random.randint(0, 1000)
         option_4 = random.randint(0, 1000) - random.randint(0, 1000)
 
     answers = [option_1, option_2, option_3, option_4]
@@ -299,7 +298,6 @@ def div_task(difficulty=1):
     else:
         operand2 = values1[1]
         solution = values1[0]
-
 
     return[operand1, operand2] + sorted([solution, values2[random.randint(0, 1)],
                                     values3[random.randint(0, 1)], values4[random.randint(0, 1)]])
