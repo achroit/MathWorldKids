@@ -1,6 +1,7 @@
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from kivy.core.window import Window
+from kivy.uix.popup import Popup
 import taskCreator
 
 
@@ -238,6 +239,10 @@ class ComingSoonScreen(Screen):
     pass
 
 
+class PopUpQuit(Popup):
+    pass
+
+
 class MathApp(App):
 
     sm = ScreenManager(transition=FadeTransition())
@@ -264,8 +269,14 @@ class MathApp(App):
         return self.sm
 
     def handle_keyboard(self, window, key, *largs):
-        if key == 27:
-            self.sm.current = 'start'
+        #keycode 273 equals up button, just for test purposes
+        if key == 27 or key == 273:
+            if self.sm.current_screen.name == 'game':
+                popup = PopUpQuit()
+                popup.open()
+            elif self.sm.current_screen.name == 'menu':
+                quit()
+
             return True
 
 if __name__ == '__main__':

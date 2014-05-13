@@ -309,3 +309,18 @@
             pos_hint: {'center_x': 0.45}
             text: 'back'
             on_release: root.manager.current = 'start'
+
+<PopUpQuit>:
+    size_hint: .5, .2
+    auto_dismiss: False
+    title: 'Quit current game?'
+    BoxLayout:
+        padding: 10
+        Button:
+            text: 'No'
+            on_release: root.dismiss()
+        Button:
+            text: 'Yes'
+            on_release:
+                app.sm.current = 'menu'
+                root.dismiss()
