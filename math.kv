@@ -3,6 +3,7 @@
 <Label>:
     font_name: 'ArchitectsDaughter.ttf'
     color: 0,0,0,1
+    font_size: 20
 
 #Rule for all Widgets
 <Widget>:
@@ -18,6 +19,7 @@
 <Button>:
     background_normal: './data/normal.png'
     background_down: './data/down.png'
+
 <MenuScreen>:
     BoxLayout:
         orientation: 'vertical'
@@ -225,6 +227,7 @@
         Label:
             id: task
             text: 'The current task: 5 + 5'
+            font_size: 45
         GridLayout:
             cols: 2
             padding: 25
@@ -346,6 +349,7 @@
     size_hint: .5, .2
     auto_dismiss: False
     title: 'Quit current game?'
+    title_color: 0,0,0,1
     BoxLayout:
         padding: 10
         Button:
