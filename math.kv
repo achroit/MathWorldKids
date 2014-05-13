@@ -1,8 +1,27 @@
+
+#Rule for all Labels
+<Label>:
+    font_name: 'ArchitectsDaughter.ttf'
+    color: 0,0,0,1
+
+#Rule for all Widgets
+<Widget>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            # self here refers to the widget i.e BoxLayout
+            pos: self.pos
+            size: self.size
+
+
+
 <MenuScreen>:
     BoxLayout:
         orientation: 'vertical'
         Label:
-            text: 'Put logo here!'
+            text: 'MathWorldKids'
+            font_size: 45
         BoxLayout:
             size_hint: 0.6, 1
             pos_hint: {'center_x': 0.5}
