@@ -192,6 +192,7 @@ def sub_task(difficulty=1):
     whole_task = operands + answers
     return whole_task
 
+
 def multi_task(difficulty=1):
     #TODO: disallow the same 2 answers,
     #TODO prevent two times the same task
@@ -278,3 +279,29 @@ def multi_task(difficulty=1):
     answers.sort()
     whole_task = operands + answers
     return whole_task
+
+
+def div_task(difficulty=1):
+    values1 = multi_task(difficulty)
+    values2 = multi_task(difficulty)
+    values3 = multi_task(difficulty)
+    values4 = multi_task(difficulty)
+
+    if values1[0] == 0:
+        values1[0] = 1
+    elif values1[1] == 0:
+        values1[1] = 1
+
+    operand1 = values1[0] * values1[1]
+    if random.randint(0, 1):
+        operand2 = values1[0]
+        solution = values1[1]
+    else:
+        operand2 = values1[1]
+        solution = values1[0]
+
+
+    return[operand1, operand2] + sorted([solution, values2[random.randint(0, 1)],
+                                    values3[random.randint(0, 1)], values4[random.randint(0, 1)]])
+
+
