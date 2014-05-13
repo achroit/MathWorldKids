@@ -233,8 +233,10 @@ class AboutScreen(Screen):
                "  - never gets old, new content is generated procedurally\n" \
                "  - written in Python with the help of Kivy"
 
+
 class ComingSoonScreen(Screen):
     pass
+
 
 class MathApp(App):
 
