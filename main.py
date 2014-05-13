@@ -99,7 +99,7 @@ class ProgressScreen(Screen):
 class GameActionScreen(Screen):
     errors_made = 0
     round_number = 1
-    max_rounds = 10
+    max_rounds = 20
 
     task_values = [0, 0, 0, 0, 0, 0]
 
