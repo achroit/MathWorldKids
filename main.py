@@ -15,6 +15,7 @@ class StartScreen(Screen):
 
 
 class AddChooseDifficulty(Screen):
+    title = "Addition - Great fun with the + sign"
     category1 = "Up to 5"
     category2 = "Up to 10"
     category3 = "Up to 15"
@@ -28,6 +29,7 @@ class AddChooseDifficulty(Screen):
 
 
 class SubChooseDifficulty(Screen):
+    title = "Subtracting - But not less funny "
     category1 = "Up to 5"
     category2 = "Up to 10"
     category3 = "Up to 15"
@@ -41,6 +43,7 @@ class SubChooseDifficulty(Screen):
 
 
 class MultiChooseDifficulty(Screen):
+    title = "Multiplication - Double the fun"
     category1 = "Times of 2"
     category2 = "Times of 3"
     category3 = "Times of 4"
@@ -54,6 +57,7 @@ class MultiChooseDifficulty(Screen):
 
 
 class DivChooseDifficulty(Screen):
+    title = "Division - Just a fraction of math"
     category1 = "Times of 2"
     category2 = "Times of 3"
     category3 = "Times of 4"
@@ -67,6 +71,7 @@ class DivChooseDifficulty(Screen):
 
 
 class GreaterSmallerChooseDifficulty(Screen):
+    title = "Who is the greatest?"
     category1 = "Up to 10"
     category2 = "25"
     category3 = "50"
@@ -80,6 +85,7 @@ class GreaterSmallerChooseDifficulty(Screen):
 
 
 class ChallengeChooseDifficulty(Screen):
+    title = "Challenge - Are your ready?"
     category1 = "Adding + Subtracting"
     category2 = "Adding + Subtracting 2"
     category3 = "Multiplication and Division"
