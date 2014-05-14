@@ -263,6 +263,8 @@ class MathApp(App):
 
     sm = ScreenManager(transition=FadeTransition())
 
+
+
     def build(self):
 
         self.sm.add_widget(MenuScreen(name='menu'))
@@ -281,6 +283,8 @@ class MathApp(App):
         self.sm.add_widget(ComingSoonScreen(name='comingsoon'))
         #Bind to keyboard to make the back button under android work
         Window.bind(on_keyboard=self.handle_keyboard)
+
+        self.title = 'MathWorldKids'
 
         return self.sm
 
