@@ -150,7 +150,6 @@ class GameActionScreen(Screen):
         self.ids.button_2.background_normal = "./data/normal.png"
         self.ids.button_3.background_normal = "./data/normal.png"
         self.ids.button_4.background_normal = "./data/normal.png"
-        self.ids.button_1.background_down = "./data/down.png"
 
     def check_answer(self, button_pressed):
         if self.current_mode == "addChooser":
@@ -159,9 +158,6 @@ class GameActionScreen(Screen):
             elif int(button_pressed.text) == self.task_values[0] + self.task_values[1]:
                 self.round_number += 1
                 self.ids.label_3.text = str(self.round_number) + " / " + str(self.max_rounds)
-                button_pressed.background_down = './data/correct.png'
-                button_pressed.background_normal = './data/correct.png'
-                button_pressed.text = 'wrong'
                 self.set_next_task()
             else:
                 self.errors_made += 1
