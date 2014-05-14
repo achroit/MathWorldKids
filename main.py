@@ -223,12 +223,6 @@ class HelpScreen(Screen):
                "\n"\
                "Or add in two steps, first to get to an more easy number, \n" \
                "then whatever remains.\n" \
-               "\n"\
-               "587 + 33 = ?\n" \
-               "33 = 20 + 13\n" \
-               "587 + 13 = 600; 600 + 20 = 620\n" \
-               "Therefore 587 + 33 is 620\n" \
-               "\n"\
                "More will follow soon!\n"
 
 
@@ -238,15 +232,11 @@ class AboutScreen(Screen):
         return "Made by: Jonas\n" \
                "Open source and free of charge \n" \
                "\n" \
-               "This app has been written to help everyone to be better\n" \
-               " at mental arithmetic.\n" \
-               "\n" \
                "Features:\n" \
                "  - simple\n" \
                "  - rewarding\n" \
                "  - perfect for kids in elementary school\n" \
                "  - or adults who want to train their brain ;)\n" \
-               "  - No ads, they only distract\n" \
                "  - never gets old, new content is generated procedurally\n" \
                "  - written in Python with the help of Kivy"
 
