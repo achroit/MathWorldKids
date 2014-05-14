@@ -3,7 +3,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from kivy.core.window import Window
 from kivy.uix.popup import Popup
 import taskCreator
-
+import time
 
 # Declare both screens
 class MenuScreen(Screen):
@@ -145,6 +145,13 @@ class GameActionScreen(Screen):
         self.ids.label_2.text = str(self.current_mode) + str(self.current_category)
         self.ids.label_3.text = str(self.round_number) + " / " + str(self.max_rounds)
 
+        #set all the button backgrounds back to normal
+        self.ids.button_1.background_normal = "./data/normal.png"
+        self.ids.button_2.background_normal = "./data/normal.png"
+        self.ids.button_3.background_normal = "./data/normal.png"
+        self.ids.button_4.background_normal = "./data/normal.png"
+        self.ids.button_1.background_down = "./data/down.png"
+
     def check_answer(self, button_pressed):
         if self.current_mode == "addChooser":
             if self.round_number == self.max_rounds:
@@ -152,10 +159,14 @@ class GameActionScreen(Screen):
             elif int(button_pressed.text) == self.task_values[0] + self.task_values[1]:
                 self.round_number += 1
                 self.ids.label_3.text = str(self.round_number) + " / " + str(self.max_rounds)
+                button_pressed.background_down = './data/correct.png'
+                button_pressed.background_normal = './data/correct.png'
+                button_pressed.text = 'wrong'
                 self.set_next_task()
             else:
                 self.errors_made += 1
                 self.ids.label_1.text = "Errors: " + str(self.errors_made)
+                button_pressed.background_normal = './data/error.png'
 
         elif self.current_mode == "subChooser":
             if self.round_number == self.max_rounds:
@@ -167,6 +178,7 @@ class GameActionScreen(Screen):
             else:
                 self.errors_made += 1
                 self.ids.label_1.text = "Errors: " + str(self.errors_made)
+                button_pressed.background_normal = './data/error.png'
 
         elif self.current_mode == "multiChooser":
             if self.round_number == self.max_rounds:
@@ -178,6 +190,7 @@ class GameActionScreen(Screen):
             else:
                 self.errors_made += 1
                 self.ids.label_1.text = "Errors: " + str(self.errors_made)
+                button_pressed.background_normal = './data/error.png'
 
         elif self.current_mode == "divChooser":
             if self.round_number == self.max_rounds:
@@ -189,6 +202,7 @@ class GameActionScreen(Screen):
             else:
                 self.errors_made += 1
                 self.ids.label_1.text = "Errors: " + str(self.errors_made)
+                button_pressed.background_normal = './data/error.png'
 
         elif self.current_mode == "greaterSmallerChooser":
             pass
