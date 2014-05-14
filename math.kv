@@ -313,6 +313,7 @@
             on_release: root.manager.current = 'menu'
 
 <ResultScreen>:
+    on_enter: root.calculate_result(app.sm.get_screen('game'))
     BoxLayout:
         spacing: 25
         padding: 25
@@ -321,8 +322,21 @@
             size_hint: 0.5, 0.15
             pos_hint: {'center_x': 0.45}
             text: 'Result'
+        BoxLayout:
+            size_hint: 0.2, 0.2
+            pos_hint: {'center_x': 0.45}
+            Image:
+                id: star_1
+                source: './data/star_grey.png'
+            Image:
+                id: star_2
+                source: './data/star_grey.png'
+            Image:
+                id: star_3
+                source: './data/star_grey.png'
         Label:
-            text: 'Well done!'
+            id: label
+            text: ' '
         Button:
             size_hint: 0.5, 0.1
             pos_hint: {'center_x': 0.45}

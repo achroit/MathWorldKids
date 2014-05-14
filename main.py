@@ -208,7 +208,21 @@ class GameActionScreen(Screen):
 
 
 class ResultScreen(Screen):
-    pass
+    def calculate_result(self, screen):
+        if screen.errors_made <= 1:
+            self.ids.star_3.source = './data/star.png'
+            self.ids.star_2.source = './data/star.png'
+            self.ids.star_1.source = './data/star.png'
+            self.ids.label.text = 'Excellent!\n\n You are a true Master of Mathematics!'
+        elif screen.errors_made <= 3:
+            self.ids.star_2.source = './data/star.png'
+            self.ids.star_1.source = './data/star.png'
+            self.ids.label.text = 'Very good!\n\n Close to perfect. Keep up!'
+        elif screen.errors_made <= 5:
+            self.ids.star_1.source = './data/star.png'
+            self.ids.label.text = 'Good!\n\n Train more to become a master of math!'
+        else:
+            self.ids.label.text = 'Okay...\n\n Try again to get all the stars!'
 
 
 class HelpScreen(Screen):
