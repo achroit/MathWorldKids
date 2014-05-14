@@ -36,9 +36,10 @@
             Button:
                 text: 'Start'
                 on_release: root.manager.current = 'start'
-            Button:
-                text: 'Achievements'
-                on_release: root.manager.current = 'progress'
+            # Comment, because currently not implemented
+            #Button:
+            #    text: 'Achievements'
+            #    on_release: root.manager.current = 'progress'
             Button:
                 text: 'Tips & Tricks'
                 on_release: root.manager.current = 'help'
@@ -81,16 +82,16 @@
                 pos_hint: {'center_x': 0.5}
                 text: 'division'
                 on_release: root.manager.current = 'divChooser'
-            Button:
-                size_hint: 0.7, 1
-                pos_hint: {'center_x': 0.5}
-                text: 'greater/smaller'
-                on_release: root.manager.current = 'comingsoon'
-            Button:
-                size_hint: 0.7, 1
-                pos_hint: {'center_x': 0.5}
-                text: 'Challenge'
-                on_release: root.manager.current = 'comingsoon'
+            #Button:
+            #    size_hint: 0.7, 1
+            #    pos_hint: {'center_x': 0.5}
+            #    text: 'greater/smaller'
+            #    on_release: root.manager.current = 'comingsoon'
+            #Button:
+            #    size_hint: 0.7, 1
+            #    pos_hint: {'center_x': 0.5}
+            #    text: 'Challenge'
+            #    on_release: root.manager.current = 'comingsoon'
         Button:
             size_hint: 0.5, 0.1
             pos_hint: {'center_x': 0.45}
