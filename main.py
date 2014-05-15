@@ -2,8 +2,8 @@ from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from kivy.core.window import Window
 from kivy.uix.popup import Popup
-from kivy.uix.scatter import Scatter
 import taskCreator
+
 
 # Declare both screens
 class MenuScreen(Screen):
@@ -260,10 +260,6 @@ class ComingSoonScreen(Screen):
 
 
 class PopUpQuit(Popup):
-    pass
-
-
-class World(Scatter):
     pass
 
 

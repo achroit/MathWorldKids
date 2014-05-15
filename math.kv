@@ -20,14 +20,6 @@
     background_normal: './data/normal.png'
     background_down: './data/down.png'
 
-<World>:
-    do_scale: False
-    do_rotation: False
-    do_translation: False
-    auto_bring_to_front: False
-    rotation: 5
-    source: './data/star.png'
-
 
 <MenuScreen>:
     BoxLayout:
@@ -36,6 +28,14 @@
             size_hint_y: 0.5
             text: 'MathWorldKids'
             font_size: 45
+            canvas.before:
+                Color:
+                    rgba: 1,1,1,1
+                Rectangle:
+                    source: './data/logo.png'
+                    size: self.size[0]/2, self.size[1]
+                    pos: self.center_x/2, self.pos[1]
+
         BoxLayout:
             size_hint: 0.6, 1
             pos_hint: {'center_x': 0.5}
